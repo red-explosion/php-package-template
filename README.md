@@ -1,3 +1,5 @@
+<p align="center"><img width="400" src="./art/logo.svg" alt="package_name Logo"></p>
+
 # package_name
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/red-explosion/package_slug.svg?style=flat-square)](https://packagist.org/packages/red-explosion/package_slug)
@@ -6,7 +8,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/red-explosion/package_slug.svg?style=flat-square)](https://packagist.org/packages/red-explosion/package_slug)
 <!--delete-->
 ---
-This repo can be used to scaffold a Red Explosion package. Follow these steps to get started:
+This repo can be used to create a Red Explosion PHP package. Follow these steps to get started:
 
 1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
 ---
@@ -15,7 +17,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 
 ## Installation
 
-You can install the package via composer:
+To get started, install package_name via the Composer package manager:
 
 ```bash
 composer require red-explosion/package_slug
