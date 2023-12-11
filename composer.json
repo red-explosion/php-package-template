@@ -21,8 +21,9 @@
         "laravel/pint": "^1.10",
         "pestphp/pest": "^2.6",
         "pestphp/pest-plugin-arch": "^2.1",
+        "phpstan/phpstan": "^1.10",
         "red-explosion/pint-config": "^1.1",
-        "spatie/laravel-ray": "^1.32"
+        "spatie/ray": "^1.40"
     },
     "autoload": {
         "psr-4": {
