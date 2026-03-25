@@ -2,10 +2,4 @@ parameters:
     paths:
         - src/
 
-    level: max
-
-    ignoreErrors:
-
-    excludePaths:
-
-    checkMissingIterableValueType: false
+    level: 8

@@ -18,12 +18,10 @@
         "php": "^8.2"
     },
     "require-dev": {
-        "laravel/pint": "^1.10",
-        "pestphp/pest": "^2.6",
-        "pestphp/pest-plugin-arch": "^2.1",
-        "phpstan/phpstan": "^1.10",
-        "red-explosion/pint-config": "^1.1",
-        "spatie/ray": "^1.40"
+        "laravel/pint": "^1.29",
+        "pestphp/pest": "^4.4",
+        "pestphp/pest-plugin-arch": "^4.0",
+        "phpstan/phpstan": "^2.1"
     },
     "autoload": {
         "psr-4": {
@@ -36,14 +34,14 @@
         }
     },
     "scripts": {
-        "lint": "./vendor/bin/pint --config vendor/red-explosion/pint-config/pint.json",
-        "test:lint": "./vendor/bin/pint --config vendor/red-explosion/pint-config/pint.json --test",
-        "test:types": "./vendor/bin/phpstan analyse --ansi",
-        "test:unit": "./vendor/bin/pest --compact --colors=always",
+        "lint": "pint --parallel",
+        "test:lint": "pint --parallel --test",
+        "test:unit": "pest --parallel",
+        "test:types": "phpstan",
         "test": [
+            "@test:unit",
             "@test:lint",
-            "@test:types",
-            "@test:unit"
+            "@test:types"
         ]
     },
     "config": {

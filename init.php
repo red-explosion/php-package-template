@@ -1,11 +1,13 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 function files(): array
 {
     $files = explode(
         separator: PHP_EOL,
-        string: run(command: 'grep -E -r -l -i "package_name|package_slug|package_description|author_name|author_username|author@email.com|skeleton|Skeleton" --exclude-dir=vendor ./* ./.github/* | grep -v ' . basename(path: __FILE__))
+        string: run(command: 'grep -E -r -l -i "package_name|package_slug|package_description|author_name|author_username|author@email.com|skeleton|Skeleton" --exclude-dir=vendor ./* ./.github/* | grep -v '.basename(path: __FILE__))
     );
 
     $files[] = './config/skeleton.php';
@@ -15,7 +17,7 @@ function files(): array
 
 function run(string $command): string
 {
-    return trim(string: (string) shell_exec(command: $command));
+    return mb_trim(string: (string) shell_exec(command: $command));
 }
 
 function replaceInFile(string $file, array $replacements): void
@@ -81,7 +83,7 @@ foreach (files() as $file) {
     ]);
 
     match (true) {
-        str_contains($file, determineSeparator(path: 'src/Skeleton.php')) => rename($file, determineSeparator(path: './src/' . $className . '.php')),
+        str_contains($file, determineSeparator(path: 'src/Skeleton.php')) => rename($file, determineSeparator(path: './src/'.$className.'.php')),
         str_contains($file, 'README.md') => removeReadmeParagraphs($file),
         default => [],
     };

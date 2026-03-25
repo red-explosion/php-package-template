@@ -1,5 +1,3 @@
-<p align="center"><img width="400" src="./art/logo.svg" alt="package_name Logo"></p>
-
 # package_name
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/red-explosion/package_slug.svg?style=flat-square)](https://packagist.org/packages/red-explosion/package_slug)
